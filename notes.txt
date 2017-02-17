@@ -140,3 +140,13 @@ CONSIDER:
  $ npm install --save react-router
 
 - History is going to listen to the browser's address bar for any changes, and it will keep track of those changes.
+
+
+**************************************************************************************************************************************************************************
+PROPS
+
+- Props are typically the only way that parents' components can interact with their children.
+- When we modify a child, you re-render it with new props.
+- In some cases, we want to reach out to individual elements to figure out what their values are.
+- The way that we can do this is with refs.
+- Go ahead and add refs to the input fields on AddDayForm.js.
