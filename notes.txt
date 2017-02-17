@@ -1,0 +1,142 @@
+By Eve Porcello - Lynda.com
+
+**************************************************************************************************************************************************************************
+
+[server option]
+$ sudo npm install -g httpster
+
+go to your app directory and set up a port
+
+$ httpster -d ./dist -p 300
+
+**************************************************************************************************************************************************************************
+DOM DIFFING
+- React made updating the DOM faster by using DOM Diffing.
+- DOM Diffing happens when you compare the currently rendered content with the new UI changes that are about to be made.
+- React optimizes this by making only the minimal changes necessary. With DOM Diffing, JavaScript objects are compared and this is much, much faster than writing to or reading from the actual DOM.
+
+- Writing to and reading from the DOM is slow, working with JavaScript objects is faster.
+- We also deal with a slower DOM with other frameworks and libraries like Backbone.
+- The way that we typically program with Backbone is that we re-render the same data over and over again, even when the changes haven't happen everywhere.
+- This re-rendering slows down our apps a lot.
+- With React, only the minimal changes will be rendered so this is really efficient.
+- Let's say, I needed to update a single item in a bulleted list, I won't get rid of the existing list, I will just make the one required change.
+- We never read from the DOM and we only write to it when a change is required.
+
+**************************************************************************************************************************************************************************
+JSX BABEL
+- JSX is not natively supported by the browser so how do we use it, the answer is we have to transpile it.
+- The leading tool for transpiling JavaScript so that it's ready for the browser is Babel. http://babeljs.io/
+- The way Babel works is that it takes in code that isn't supported by the browser and spits it out as code that is browser supported.
+- So this means that we can use JSX if we use it in combination with Babel.
+- We can also use ES6, ES2016, ES2017 right away. We don't have to wait for browsers to support these features.
+
+**************************************************************************************************************************************************************************
+TRANSPILING BEFORE RUN TIME
+BundleJS
+- When you're working in production, you'll want to handle transpiling before your scripts get to the browser.
+- We're going to set up a project using npm as well as the Babel Command Line Interface, or CLI, to demonstrate this.
+
+$ npm install --save-dev babel-cli
+
+- Optionally, is you can install this package globally, so that you can run Babel from any folder on your computer.
+- This sometimes helps with path issues that arise from installing it locally
+$ sudo npm install -g babel-cli
+
+- on app directory create a .babelrc file
+- ps: (make sure to use double quotes)
+
+- .babelrc file. It's going to run Babel on all of our latest ECMAScript features, all of our JSX, as well as anything that has been proposed as an ECMAScript feature.
+- Once we've done this, we need to install all of these via npm.
+$ npm install --save-dev babel-preset-latest babel-preset-react babel-preset-stage-0
+
+- run babel command
+babel ./src/index.js --out-file ./dist/bundle.js
+
+**************************************************************************************************************************************************************************
+MODULE BUNDLER
+Webpack
+- Webpack is a module bundler that helps us create static files and helps us automate processes that need to happen before our files can go into production.
+
+$ npm install webpack babel-loader webpack-dev-server --save
+
+- We can install webpack globally using our sudo npm install -g webpack.
+- If you'd prefer not to use a global command, what you can do is this, you can use ./node_modules/.bin/webpack.
+
+To see detailed errors:
+webpack --display-error-details
+
+***Handy
+if you set up a server:
+replace the test line in your package.json
+    "test": "echo \"Error: no test specified\" && exit 1"
+for
+    "start": "./node_modules/.bin/webpack/"
+
+-Then uncomment the devServer script in your webpack.config.js
+
+**************************************************************************************************************************************************************************
+Bring React
+$ npm install --save react react-dom
+
+- Create a new file inside the src folder called "lib.js" and "titles.json"
+
+- Make changes to your webpack.config.js
+
+$ npm install --save-dev json-loader
+
+**************************************************************************************************************************************************************************
+SASS
+Bundle CSS
+- Make accordingly changes to your webpack.config.js
+
+$ npm install style-loader css-loader autoprefixer-loader sass-loader node-sass --save-dev
+
+
+**************************************************************************************************************************************************************************
+- We have used Webpack for several things now.
+- We're using it for Babel, we're using it for SCSS to CSS, we're loading CSS using import statements, and finally we're loading some JSON data using a JSON loader.
+
+
+**************************************************************************************************************************************************************************
+
+*How to pass styles inside jsx files:
+ie: <h1 id="title" className="header" style={{backgroundColor: 'yellow', color: 'purple'}}>{text.goodbye}</h1>
+
+**************************************************************************************************************************************************************************
+SERVER
+run
+webpack-dev-server
+
+
+**************************************************************************************************************************************************************************
+REACT
+STATELESS FUNCTIONAL COMPONENTS
+- Stateless functional components are functions that take in property information, and return JSX elements.
+- Stateless components can't access this, so properties are passed directly into the function. Also, local methods need to be removed, and put into their own functions.
+- It's typically a good idea to use stateless components, whenever possible.
+- Stateless components offer a functional way to work with components.
+- React team has hinted that there may be some PERFORMANCE benefits of using these functions, rather than using createClass, or ES6 classes.
+
+**************************************************************************************************************************************************************************
+REACT ICONS
+https://gorangajic.github.io/react-icons/fa.html
+
+$ npm install --save react-icons
+
+
+**************************************************************************************************************************************************************************
+CONSIDER:
+- Optional but very useful feature that use in React is default properties. When we setup defaults, we can use the default values if another value is not provided.
+- While using PropTypes again is not a requirement, I definitely recommend it. It's fairly quick to set up, and it really helps in the debugging process tremendously.
+
+**************************************************************************************************************************************************************************
+
+ REACT ROUTER
+ We need a away for going back and forth between the 'pages' of our app. There are many different ways of handling navigation in React, but the React Router is one of the more popular methods.
+
+ https://github.com/ReactTraining/react-router
+
+ $ npm install --save react-router
+
+- History is going to listen to the browser's address bar for any changes, and it will keep track of those changes.

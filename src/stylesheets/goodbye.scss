@@ -1,0 +1,19 @@
+//Sass
+$bg-color: turquoise;
+$text-color: indigo;
+$width: 300px;
+$border-radius: 4px;
+$text-align: center;
+$margin: 4px auto;
+$padding: 3px;
+
+
+.goodbye {
+  background: $bg-color;
+  color: $text-color;
+  width: 300px;
+  border-radius: 4px;
+  text-align: center;
+  margin: 4px auto;
+  padding: 3px;
+}
