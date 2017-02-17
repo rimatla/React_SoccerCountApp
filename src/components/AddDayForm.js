@@ -1,5 +1,4 @@
 import { PropTypes, Component } from 'react'
-import '../stylesheets/ui.scss'
 
 export const AddDayForm = ( {location, date, sunny, rainy } ) => {
     //initialize variables
@@ -13,7 +12,7 @@ export const AddDayForm = ( {location, date, sunny, rainy } ) => {
     };
 
     return (
-        <form onSubmit={submit} className="add-day-form">
+        <form onSubmit={submit} className="add-day">
             <label htmlFor="location">Soccer Location</label>
             <input id="location" type="text" required defaultValue={location} ref={input  => _location = input}/>
 
@@ -27,7 +26,7 @@ export const AddDayForm = ( {location, date, sunny, rainy } ) => {
                 <input id="sunny" type="checkbox" defaultChecked={rainy} ref={input  => _rainy = input}/>
                 <label htmlFor="rainy">Rainy Day</label>
             </div>
-            <button>Add Day</button>
+            <button className="add-btn">Add Day</button>
         </form>
     )
 };

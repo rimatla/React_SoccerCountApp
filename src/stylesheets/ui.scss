@@ -1,43 +1,15 @@
-//Sass
-//$bg-color: tomato;
-//$text-color: indigo;
-//$width: 300px;
-//$border-radius: 4px;
-//$text-align: center;
-//$margin: 5px auto;
-//$padding: 3px;
-//$font-size: 34px;
-//
-//
-//.ski-day-count {
-//   background: $bg-color;
-//   color: $text-color;
-//   margin: $margin;
-//   text-align: $text-align;
-//   width: $width;
-//   font-size: $font-size;
-// }
-//
-//.powder-days {
-//  background: $bg-color;
-//  color: $text-color;
-//  margin: $margin;
-//  text-align: $text-align;
-//  width: $width;
-//  font-size: $font-size;
-//}
-//
-//.backcountry-days {
-//  background: $bg-color;
-//  color: $text-color;
-//  margin: $margin;
-//  text-align: $text-align;
-//  width: $width;
-//  font-size: $font-size;
-//}
 
 @import "globals";
 
+.add-btn {
+  margin: auto;
+  width: 100%;
+  font-size: 2em;
+  background-color: #8a2a2d;
+  font-weight: bold;
+  color: $snow-white;
+  padding: 5px;
+}
 
 nav.menu {
   background-color: black;
