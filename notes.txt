@@ -150,3 +150,14 @@ PROPS
 - In some cases, we want to reach out to individual elements to figure out what their values are.
 - The way that we can do this is with refs.
 - Go ahead and add refs to the input fields on AddDayForm.js.
+
+
+**************************************************************************************************************************************************************************
+TWO_WAY_DATA
+
+On Adding a newDay ()
+We've passed information from a child back up to the parent using refs. And then the new state data is held consistently in the application throughout all of its components.
+
+**************************************************************************************************************************************************************************
+DATA MANAGEMENT
+Check out: Relay, Falcor, and GraphQL.

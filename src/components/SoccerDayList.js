@@ -1,8 +1,5 @@
 import { PropTypes } from 'react'
 import { Link } from 'react-router'
-// import Terrain from 'react-icons/lib/md/terrain'
-// import SnowFlake from 'react-icons/lib/ti/weather-snow'
-// import Calendar from 'react-icons/lib/fa/calendar'
 
 import {SoccerDayRow} from './SoccerDayRow'
 
@@ -11,8 +8,8 @@ export const SoccerDayList = ({days, filter}) => {
     //Else use the filter(), and add it to the list of days that match that filter.
     const filteredDays = (!filter || !filter.match(/sunny|rainy/)) ? days : days.filter(day => day[filter]);
     return (
-        <div className="ski-day-list">
-            <table>
+        <div className="soccer-day-list">
+            <table className="all-soccer-events">
                 <thead>
                 <tr>
                     <th>Date</th>

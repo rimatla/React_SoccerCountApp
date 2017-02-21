@@ -2,7 +2,8 @@ import React from 'react';
 import { render } from 'react-dom'
 import { App } from './components/App'
 import { Whoops404 } from './components/Whoops404'
-
+import './stylesheets/index.scss'
+import './stylesheets/ui.scss'
 
 import { Router, Route, hashHistory } from 'react-router'
 

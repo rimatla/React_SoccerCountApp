@@ -1,5 +1,5 @@
 import { PropTypes } from 'react'
-import '../stylesheets/ui.scss'
+// import '../stylesheets/ui.scss'
 import Sunny from 'react-icons/lib/ti/weather-sunny'
 import Rainy from 'react-icons/lib/ti/weather-shower'
 import Calendar from 'react-icons/lib/fa/calendar'
@@ -49,7 +49,7 @@ SoccerDayCount.defaultProps ={
     total: 30,
     sunny: 10,
     rainy: 15,
-    goal: 75
+    goal: 100
 };
 
 SoccerDayCount.propTypes = {

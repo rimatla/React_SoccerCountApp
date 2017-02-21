@@ -1,0 +1,40 @@
+@import "globals";
+
+html,
+body,
+div#react-container,
+div.app {
+  height: 100%;
+  padding: 0;
+  margin: 0;
+}
+
+h1, label {
+  margin: 0
+}
+
+div.app {
+  background: url('http://localhost:8080/assets/img/soc.jpg'), center no-repeat;
+  background-size: cover;
+  width: 100%;
+
+}
+
+div.app img {
+  //width: 80%;
+}
+
+div.four0fourContainer{
+  background: url('http://localhost:8080/assets/img/minion.jpg') center repeat-y;
+  min-width: 1280px;
+  width: 100%;
+  height: 800px;
+}
+div.whoops-404 {
+  padding-top: 40px;
+  font-size: 12px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}

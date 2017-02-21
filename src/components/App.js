@@ -15,28 +15,43 @@ export class App extends Component {
             allSoccerDays: [
                 {
                     location: "Pickup",
-                    date: new Date('2/2/2017'),
+                    // date: new Date('2/2/2017'),
+                    date: '2016-01-02',
                     sunny: true,
                     rainy: false
 
-                },
-                {
-                    location: "Indoor",
-                    date: new Date('3/3/2017'),
-                    sunny: false,
-                    rainy: false
-
-                },
-                {
-                    location: "Overseas",
-                    date: new Date('5/21/2017'),
-                    sunny: false,
-                    rainy: true
-
                 }
+                // {
+                //     location: "Indoor",
+                //     date: new Date('3/3/2017'),
+                //     sunny: false,
+                //     rainy: false
+                //
+                // },
+                // {
+                //     location: "Overseas",
+                //     date: new Date('5/21/2017'),
+                //     sunny: false,
+                //     rainy: true
+                //
+                // }
 
             ]
-        }
+        };
+        //bind function in the constructor
+        this.addDay = this.addDay.bind(this)
+    }
+
+    //addDay ()
+    addDay(newDay) {
+        this.setState({
+            allSoccerDays: [
+                // ES6 spread operator takes all of the existing days that are held in state
+                // Whether there are two days or 200 days it's going to push those into a new state object and it's also going to add the newDay.
+                ...this.state.allSoccerDays,
+                newDay
+            ]
+        })
     }
 
     //count days ()
@@ -68,7 +83,7 @@ export class App extends Component {
                     /> :
                     //set url
                     (this.props.location.pathname === '/add-day') ?
-                        <AddDayForm /> :
+                        <AddDayForm onNewDay={this.addDay} /> :
                         <SoccerDayList
                             days={this.state.allSoccerDays}
                             //filter days
