@@ -4,5 +4,6 @@
 ###ES6
 ###React Icons
 ###React Router
+###SASS
 
 ![alt text](app.png?raw=true "app image")
