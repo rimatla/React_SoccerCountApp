@@ -55,13 +55,17 @@ export const AddDayForm = ( {location, date, sunny, rainy, onNewDay } ) => {
         _sunny.checked = false;
         _rainy.checked = false;
 
-
-
         // console.log('location', _location.value);
         // console.log('date', _date.value);
         // console.log('sunny', _sunny.checked);
         // console.log('rainy', _rainy.checked);
     };
+
+    /**alertReact()*/
+    // const alertMe = () => {
+    //     alert('good');
+    // }
+
 
     return (
         <form onSubmit={submit} className="add-day">
@@ -80,7 +84,7 @@ export const AddDayForm = ( {location, date, sunny, rainy, onNewDay } ) => {
                 <input id="sunny" type="checkbox" defaultChecked={rainy} ref={input  => _rainy = input}/>
                 <label htmlFor="rainy">Rainy Day</label>
             </div>
-            <button className="add-btn">Add Day</button>
+            <button  className="add-btn">Add Day</button>
         </form>
     )
 };

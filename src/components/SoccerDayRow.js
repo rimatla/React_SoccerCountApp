@@ -8,10 +8,10 @@ export const SoccerDayRow = ({location, date,
                                 sunny, rainy}) => (
          <tr>
              {/*<td>{(new Date(date)).getMonth()+1}/{(new Date(date)).getDate()}/{(new Date(date)).getFullYear()}</td>*/}
-             <td>{date}</td>
-             <td>{location}</td>
-             <td>{(sunny) ? <Sunny/> : null}</td>
-             <td>{(rainy) ? <Rainy/> : null}</td>
+             <td className="displayNewData">{date}</td>
+             <td className="displayNewData">{location}</td>
+             <td className="displayNewData">{(sunny) ? <Sunny/> : null}</td>
+             <td className="displayNewData">{(rainy) ? <Rainy/> : null}</td>
          </tr>
 );
 

@@ -12,20 +12,10 @@ export const SoccerDayList = ({days, filter}) => {
             <table className="all-soccer-events">
                 <thead>
                 <tr>
-                    <th>Date</th>
-                    <th>Location</th>
-                    <th>Sunny</th>
-                    <th>Rainy</th>
-                </tr>
-                <tr>
-                    <td colSpan = {4}>
-                        <Link to="/list-days">All Days</Link>
-                        <Link to="/list-days/sunny">Sunny Days</Link>
-                        <Link to="/list-days/rainy">Rainy Days</Link>
-                    </td>
-                </tr>
-                <tr>
-
+                    <th  className="events-list">Date</th>
+                    <th  className="events-list">Location</th>
+                    <th  className="events-list">Sunny</th>
+                    <th  className="events-list">Rainy</th>
                 </tr>
                 </thead>
                 <tbody>
@@ -40,6 +30,15 @@ export const SoccerDayList = ({days, filter}) => {
                     />
                 )}
                 </tbody>
+                <thead className="items-links">
+                <tr>
+                    <td colSpan = {4}>
+                        <Link className= "items-aTags" to="/list-days">All Days</Link>
+                        <Link className= "items-aTags" to="/list-days/sunny">Sunny Days</Link>
+                        <Link className= "items-aTags"  to="/list-days/rainy">Rainy Days</Link>
+                    </td>
+                </tr>
+                </thead>
             </table>
         </div>
     )

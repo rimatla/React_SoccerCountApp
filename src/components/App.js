@@ -4,9 +4,6 @@ import {SoccerDayCount} from './SoccerDayCount'
 import {AddDayForm} from './AddDayForm'
 import { Menu } from './Menu'
 
-
-
-
 export class App extends Component {
     constructor(props) {
         super(props);
@@ -14,32 +11,42 @@ export class App extends Component {
         this.state= {
             allSoccerDays: [
                 {
-                    location: "Pickup",
+                    location: "Minneapolis",
                     // date: new Date('2/2/2017'),
-                    date: '2016-01-02',
+                    date: '2017-08-11',
+                    sunny: true,
+                    rainy: false
+
+                },
+                {
+                    location: "Rio",
+                    // date: new Date('3/3/2017'),
+                    date: '2017-01-22',
+                    sunny: false,
+                    rainy: true
+
+                },
+                {
+                    location: "VA",
+                    // date: new Date('5/21/2017'),
+                    date: '2017-05-02',
+                    sunny: false,
+                    rainy: true
+
+                },
+                {
+                    location: "New York",
+                    // date: new Date('5/21/2017'),
+                    date: '2017-05-12',
                     sunny: true,
                     rainy: false
 
                 }
-                // {
-                //     location: "Indoor",
-                //     date: new Date('3/3/2017'),
-                //     sunny: false,
-                //     rainy: false
-                //
-                // },
-                // {
-                //     location: "Overseas",
-                //     date: new Date('5/21/2017'),
-                //     sunny: false,
-                //     rainy: true
-                //
-                // }
 
             ]
         };
         //bind function in the constructor
-        this.addDay = this.addDay.bind(this)
+        this.addDay = this.addDay.bind(this);
     }
 
     //addDay ()
