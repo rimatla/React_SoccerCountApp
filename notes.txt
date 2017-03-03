@@ -1,6 +1,12 @@
 By Eve Porcello - Lynda.com
 
 **************************************************************************************************************************************************************************
+JSON
+import JSONdata from '../data.json'
+
+
+
+**************************************************************************************************************************************************************************
 
 [server option]
 $ sudo npm install -g httpster
@@ -55,6 +61,9 @@ babel ./src/index.js --out-file ./dist/bundle.js
 
 **************************************************************************************************************************************************************************
 MODULE BUNDLER
+- We just used Babel's inline browser transpiler above. this is really great for quick projects or for testing, but when you're working in production, you'll want to handle transpiling before your scripts get to the browser.
+
+
 Webpack
 - Webpack is a module bundler that helps us create static files and helps us automate processes that need to happen before our files can go into production.
 

@@ -4,46 +4,15 @@ import {SoccerDayCount} from './SoccerDayCount'
 import {AddDayForm} from './AddDayForm'
 import { Menu } from './Menu'
 
+import JSONdata from '../data.json'
+
+
 export class App extends Component {
     constructor(props) {
         super(props);
         //app initial state default
         this.state= {
-            allSoccerDays: [
-                {
-                    location: "Minneapolis",
-                    // date: new Date('2/2/2017'),
-                    date: '2017-08-11',
-                    sunny: true,
-                    rainy: false
-
-                },
-                {
-                    location: "Rio",
-                    // date: new Date('3/3/2017'),
-                    date: '2017-01-22',
-                    sunny: false,
-                    rainy: true
-
-                },
-                {
-                    location: "VA",
-                    // date: new Date('5/21/2017'),
-                    date: '2017-05-02',
-                    sunny: false,
-                    rainy: true
-
-                },
-                {
-                    location: "New York",
-                    // date: new Date('5/21/2017'),
-                    date: '2017-05-12',
-                    sunny: true,
-                    rainy: false
-
-                }
-
-            ]
+            allSoccerDays: JSONdata.displayAllSoccerDays
         };
         //bind function in the constructor
         this.addDay = this.addDay.bind(this);
@@ -80,6 +49,7 @@ export class App extends Component {
     render(){
         return (
             <div className="app">
+                {/*<h1>{JSONdata.allSoccerDays[3].location}</h1>,*/}
                 <Menu />
                 {
                     //set url

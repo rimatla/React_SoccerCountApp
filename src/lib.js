@@ -1,5 +1,5 @@
 import React from 'react';
-import text from './titles.json'
+import text from './data.json'
 import './stylesheets/goodbye.scss'
 import './stylesheets/hello.css'
 
