@@ -3,8 +3,8 @@ import { SoccerDayList } from './SoccerDayList'
 import {SoccerDayCount} from './SoccerDayCount'
 import {AddDayForm} from './AddDayForm'
 import { Menu } from './Menu'
-
 import JSONdata from '../data.json'
+import axios from 'axios';
 
 
 export class App extends Component {
@@ -14,15 +14,37 @@ export class App extends Component {
         this.state= {
             allSoccerDays: JSONdata.displayAllSoccerDays
         };
-        //bind function in the constructor
+
+        //store json data on variable
+        let apiUrl = JSONdata.displayAllSoccerDays;
+        console.log(apiUrl);
+
+        //binding methods in the constructor
         this.addDay = this.addDay.bind(this);
     }
 
     //addDay ()
     addDay(newDay) {
+        /*************************************************************************************************************
+                                                   //Broke
+        //*************************************************************************************************************/
+
+        // //Update/Post data
+        // axios.post(this.apiUrl, newDay)
+        //     .then((res) => {
+        //         //We do not have to reload data when there is a newTodo, we just push to the existing array
+        //         this.state.allSoccerDays.push(res.data);
+        //         this.setState({allSoccerDays: this.state.allSoccerDays});
+        //     });
+
+
+        /********************************************* ****************************************************************/
+
+        /**PROBLEM*/
+        //State  updates fine but changes are lost on page reload
         this.setState({
             allSoccerDays: [
-                // ES6 spread operator takes all of the existing days that are held in state
+                // ES6 spread (...) operator takes all of the existing days that are held in state
                 // Whether there are two days or 200 days it's going to push those into a new state object and it's also going to add the newDay.
                 ...this.state.allSoccerDays,
                 newDay

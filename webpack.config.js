@@ -45,6 +45,10 @@ module.exports = {
         contentBase: './dist',
         port: '8080'
     },
+
+    node: {
+        fs: "empty"
+    },
     //You can configure webpack to automatically 'watch' the project directory whenever webpack is run.
     watch: true
 };
