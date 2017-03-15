@@ -25,23 +25,7 @@ export class App extends Component {
 
     //addDay ()
     addDay(newDay) {
-        /*************************************************************************************************************
-                                                   //Axios Approach = Broke
-        //*************************************************************************************************************/
 
-        // //Update/Post data
-        // axios.post(this.apiUrl, newDay)
-        //     .then((res) => {
-        //         //We do not have to reload data when there is a newTodo, we just push to the existing array
-        //         this.state.allSoccerDays.push(res.data);
-        //         this.setState({allSoccerDays: this.state.allSoccerDays});
-        //     });
-
-
-        /********************************************* ****************************************************************/
-
-        /**PROBLEM*/
-        //State  updates fine but changes are lost on page reload
         this.setState({
             allSoccerDays: [
                 // ES6 spread (...) operator takes all of the existing days that are held in state
